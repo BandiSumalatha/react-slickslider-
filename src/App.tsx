@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import WidgetCards from './components/carousel/WidgetCards';
+import WidgetCards from './components/widges/WidgetCards';
 import Carousel from './components/carousel/Carousel';
-import BrandSection from './components/carousel/BrandSection';
-import Cards from "./components/carousel/Cards";
+import BrandSection from './components/brands/BrandSection';
+import Cards from "./components/cards-images/Cards";
 
 function App() {
 
@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
       <>
         <Header />
-        <Carousel/>
-     <WidgetCards/>
-      <BrandSection/>
-      <Cards /> 
+        <Carousel />
+        <WidgetCards />
+        <BrandSection />
+        <Cards />
         <Footer />
       </>
     </BrowserRouter>

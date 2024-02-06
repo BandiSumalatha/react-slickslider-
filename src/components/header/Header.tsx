@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import logo from "../../assets/digitelescope_logo.jpeg";
 import { makeStyles } from "@mui/styles";
 
@@ -10,8 +10,8 @@ const useStyles = makeStyles(() => ({
         alignItems: "center",
       },
       logo: {
-        width: 120,
-        height: 80,
+        width: 100,
+        height: 50,
         mixBlendMode: "multiply",
       },
       headerText: {
@@ -31,9 +31,7 @@ const Header: React.FC = () => {
         <Box>
           <img src={logo} alt="Logo" className={classes.logo} />
         </Box>
-        {/* <Typography variant="h6" component="div" className={classes.headerText}>
-          Your App Name
-        </Typography> */}
+      
       </Toolbar>
     </AppBar>
   );

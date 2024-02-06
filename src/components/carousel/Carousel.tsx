@@ -9,6 +9,10 @@ import salt from "../../assets/carousel-images/salty.webp";
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRounded';
 import { Box } from "@mui/material";
+import {
+
+
+} from "../carousel/carosel";
 
 interface Image {
   id: number;
@@ -47,7 +51,7 @@ const Carousel: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -57,8 +61,11 @@ const Carousel: React.FC = () => {
       <Box
         key={i}
         style={{
-          width: '10px',
-          height: '10px',
+          width: '8px',
+          left: '5px',
+          position: 'relative',
+          top: '5px',
+          height: '8px',
           background: currentSlide === i ? '#fff' : '#fff',
           borderRadius: '50%',
           transition: 'background-color 0.3s ease',
@@ -67,11 +74,23 @@ const Carousel: React.FC = () => {
       />
     ),
     appendDots: (dots: any) => (
-      <Box style={{ position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center' }}>
+      <Box
+        style={{
+          position: 'absolute',
+          bottom: '5px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          height: '1.125rem',
+          textAlign: 'center',
+          background: '#413839',
+          width: 'auto',
+          borderRadius: '25px',
+
+        }}>
         {dots}
       </Box>
     ),
-    beforeChange: ( next: number) => {
+    beforeChange: (next: number) => {
       setCurrentSlide(next);
     },
     responsive: [
@@ -93,14 +112,14 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <Box style={{ marginTop: '10px',width:'100%',padding:"" }}>
+    <Box margin="auto" width="90%" marginTop="10px">
       <Slider {...settings} >
         {images.map((item, index) => (
-          <Box className="img" key={index} sx={{ borderRadius: '10px' }}>
+          <Box className="img" key={index} >
             <img
               src={item.src}
               alt={`slide ${index + 1}`}
-              style={{ width: "100%", height: "auto", borderRadius: '10px' }}
+              style={{ width: "100%", height: "400px", borderRadius: '5px' }}
             />
           </Box>
         ))}
