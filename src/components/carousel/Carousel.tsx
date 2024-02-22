@@ -40,7 +40,7 @@ const PrevArrow = (props: any) => {
 };
 
 const Carousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentslide, setcurrentslide] = useState(0);
   const images: Image[] = [
     { id: 1, src: cookies, alt: 'Image 1' },
     { id: 2, src: favour, alt: 'Image 2' },
@@ -66,10 +66,10 @@ const Carousel: React.FC = () => {
           position: 'relative',
           top: '5px',
           height: '8px',
-          background: currentSlide === i ? '#fff' : '#fff',
+          background: currentslide === i ? '#fff' : '#fff',
           borderRadius: '50%',
           transition: 'background-color 0.3s ease',
-          transform: currentSlide === i ? 'scale(1.5)' : 'scale(1)',
+          transform: currentslide === i ? 'scale(1.5)' : 'scale(1)',
         }}
       />
     ),
@@ -82,7 +82,7 @@ const Carousel: React.FC = () => {
           transform: 'translateX(-50%)',
           height: '1.125rem',
           textAlign: 'center',
-          background: '#413839',
+          background: 'linear-gradient(to right, #8B008B, #FF007F)',
           width: 'auto',
           borderRadius: '25px',
 
@@ -91,7 +91,7 @@ const Carousel: React.FC = () => {
       </Box>
     ),
     beforeChange: (next: number) => {
-      setCurrentSlide(next);
+      setcurrentslide(next);
     },
     responsive: [
       {
